@@ -19,37 +19,37 @@
         <script type="text/javascript">
 
           var map = L.map('map', {
-              center: [38.16, -96.96],
-              zoom: 4
+              center: [41.83, -87.70],
+              zoom: 12
           });
 
           L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
                attribution: 'Tiles &copy; <a href="https://www.esri.com/">Esri</a>',
-               maxZoom: 4,
-               minZoom: 4
+               maxZoom: 12,
+               minZoom: 12
             }).addTo(map);
 
             
-var universityIcon = L.icon({
-    iconUrl: 'https://neiugis.github.io/lab2/university.png', // url that links to the icon image file, saved in the same folder as the current page 
+var riversiteIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/119/119573.png', // url that links to the icon image file, saved in the same folder as the current page 
     iconSize:     [38, 38], // size of the icon image in pixels
     iconAnchor:   [19, 19], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
     popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
 });
             
     
-var marker1 = L.marker([41.98,-87.72], {icon: universityIcon, alt: 'Northeastern Illinois University'}).addTo(map);
-var marker2 = L.marker([30.44,-84.3], {icon: universityIcon, alt: 'Florida State University'}).addTo(map);
-var marker3 = L.marker([40.44,-84.3], {icon: universityIcon, alt: 'Florida State University'}).addTo(map);
+var marker1 = L.marker([41.80, -87.80], {icon: riversiteIcon, alt: 'Portage Woods'}).addTo(map);
+var marker2 = L.marker([41.84, -87.66], {icon: riversiteIcon, alt: 'Bubbly Creek Confluence'}).addTo(map);
+var marker3 = L.marker([41.89, -87.61], {icon: riversiteIcon, alt: 'Chicago River Mouth'}).addTo(map);
 
 
-var pic1 = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/68/NEIU_Sci.jpg" alt="Bernard Brommel Hall at NEIU" width="250">';
-var pic2 = '<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/FSUWestcottBuilding-2.jpg" alt="Westcott Building at FSU" width="250">';
-var pic3 = '<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/FSUWestcottBuilding-2.jpg" alt="Westcott Building at FSU" width="250">';
+var pic1 = '<img src="." alt="Portage Woods Landscape with Duck Weed Pond" width="250">';
+var pic2 = '<img src="." alt="Bubbly Creek Boardwalk View of the Confluence" width="250">';
+var pic3 = '<img src="." alt="The view looking out towards Lake Michigan" width="250">';
 
-marker1.bindPopup('<p style="color:blue; font-weight:bold"> work at NEIU </p>' + pic1);
-marker2.bindPopup('<p style="color:seagreen; font-weight:bold"> went to FSU for graduate school</p>' + pic2);
-marker3.bindPopup('<p style="color:seagreen; font-weight:bold"> went to FSU for graduate school</p>' + pic2);
+marker1.bindPopup('<p style="color:#a2e851; font-weight:bold"> The view of Portage Woods landscape with the pond full of milkweed, looking NW. Visited on 9/4/2026, the photo was taken at 11:19am.</p>' + pic1);
+marker2.bindPopup('<p style="color:#29d4f2; font-weight:bold"> The view of Bubble Creek Conflience from the boardwalk, looking North. Visited on 9/11/2026, the photo was taken at 10:26am.</p>' + pic2);
+marker3.bindPopup('<p style="color:#96d0eb; font-weight:bold"> The view of the Chciago River Mouth, looking out towards Lake Michigan, Navy Pier is within the view, looking ENE. Visited on 9/18/2026, the photo was taken at 12:04pm.</p>' + pic3);
             
         </script>
    </body>
